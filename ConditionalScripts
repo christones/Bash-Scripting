@@ -65,16 +65,17 @@ The statement elif means "else if":
 
 Syntax:
 
-if [ condition_1 ] 
+``` if [ condition_1 ] 
 then
     statement_1 
 elif [ condition_2 ]  
 then
     statement_2  
-fi
+fi``` 
 
 Example
 
+``` 
 $ cat elif_example.sh
 a=2
 b=2
@@ -89,7 +90,7 @@ else # Here a is not <= b, so a > b
 fi
 
 $ sh elif_example.sh
-a is equal to b
+a is equal to b ``` 
 
 Nested Ifs
 
@@ -97,7 +98,7 @@ As in other prgramming languages, it's also possible to nest if-statements.
 
 Syntax:
 
-'if [ condition_1 ]  
+``` if [ condition_1 ]  
 then  
     statement_1  
 elif [ condition_2 ] 
@@ -108,10 +109,10 @@ elif [ condition_2 ]
     fi
 else
     statement_3
-fi'
+fi'``` 
 
 Example
-
+``` 
 $ cat nested_ifs_example.sh
 a=3
 b=3
@@ -130,10 +131,10 @@ else
 fi
 
 $ sh nested_ifs_example.sh
-a, b, and c are equal
+a, b, and c are equal``` 
 
 Alternatively, this example could have been simplified to a single if-statement:
-
+``` 
 a=3
 b=3
 c=3
@@ -142,15 +143,15 @@ then
     echo "a, b, and c are equal"
 else
     echo "the three variables are not equal"
-fi
+fi ``` 
 
-    && means "and"
+ ###   && means "and" 
 
 Bonus: "test"
 
 Sometimes, instead of using brackets around conditions, you'll see the test command in use:
 Example
-
+``` 
 $ cat test_example.sh
 a=1
 b=2
@@ -160,6 +161,6 @@ then
 fi
 
 $ sh test_example.sh
-a is less than b
+a is less than b ``` 
 
 test and [ ] are the same command. We encourage using [ ] instead as it's more readable.
